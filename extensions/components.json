@@ -1,1 +1,79 @@
-[{"name": "prescriptor", "events": null, "group": "Custom", "description": "", "inputs": [{"id": "input", "label": "input", "service": "", "to": "output"}, {"id": "file_input", "label": "file_input", "service": "files", "to": "file_output"}], "outputs": [{"id": "output", "label": "output"}, {"id": "file_output", "label": "file_output"}], "configured": true, "options": {"group": "Custom", "args": [{"name": "param_example", "type": "text", "label": "Param Example", "helper": "just an example"}], "click": null, "icon": "RiTyphoonFill", "values": {}}, "disabled": false}]
+[
+ {
+  "name": "prescriptor",
+  "description": "\n### Description\n\nThis component allows to **make** optimized prescription, providing customized constraints and the desired ....?\n\n### Input\n\n.....\n\n\n### Output\n\n.....\n\n \n",
+  "group": "Custom",
+  "icon": "RiCheckboxBlankCircleFill",
+  "click": null,
+  "configured": false,
+  "inputs": [
+   {
+    "id": "create_model",
+    "label": "Create Model",
+    "service": "ciao",
+    "to": "create_model"
+   },
+   {
+    "id": "save_ranges",
+    "label": "Save Ranges",
+    "service": "",
+    "to": "save_ranges"
+   }
+  ],
+  "outputs": [
+   {
+    "id": "create_model",
+    "label": "create_model"
+   },
+   {
+    "id": "save_ranges",
+    "label": "save_ranges"
+   }
+  ],
+  "options": {
+   "values": {},
+   "args": [
+    {
+     "name": "CONSTRAINTS",
+     "type": "multiKeyValue",
+     "label": "CONSTRAINTS",
+     "helper": "",
+     "group": "Advanced Args",
+     "value": null,
+     "description": "",
+     "validation": null,
+     "fields": [
+      {
+       "name": "cond1",
+       "placeholder": "Cond1111",
+       "validation": {
+        "required": "Required field"
+       }
+      },
+      {
+       "name": "cond2",
+       "placeholder": "cond2",
+       "validation": null
+      },
+      {
+       "name": "cond3",
+       "placeholder": "Cond3",
+       "validation": null
+      }
+     ]
+    },
+    {
+     "name": "task",
+     "type": "asyncSelect",
+     "label": "Task",
+     "helper": "",
+     "group": "",
+     "value": null,
+     "description": "",
+     "validation": null,
+     "url": "http://localhost:9999/routes/loko_prescriptor/saro"
+    }
+   ]
+  }
+ }
+]

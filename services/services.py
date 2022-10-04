@@ -2,6 +2,16 @@ from flask import Flask, request, jsonify
 
 app = Flask("")
 
+#possibile applicazione per prescriptor: Energy Smart Grid
+
+@app.route("/saro", methods=["GET"])
+def test_saro():
+    # args = request.json.get('args')
+    # print("ARGS",args)
+    # json = request.json.get("value")
+    # print("JSON",json)
+    res = ["ciao", "ciao2", "bello", "casa"]
+    return res#jsonify(dict(msg="Hello extensions!"))
 
 @app.route("/", methods=["POST"])
 def test():
